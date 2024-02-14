@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>RecycleBin</title>
+    {% include("./partials/links.html") %}
+  </head>
+  <body>
+    <main class="main_container">
+      <div class="main_container-wallpaper"></div>
+      <div class="showPanel"></div>
+      {% include("./partials/panelOption.html") %}
+      {% include("./partials/musicPlayer.html") %}
+      <div class="card_with_files">
+        <div id="text_Empty">
+          <p>Está Vacía Tonto</p>
+        </div>
+        <div class="container_List">
+        <!-- <div class="content_Info_Files">
+          <div class="content_Files">
+            <div class="content_name_path">
+              <h2 id="nameFile">Name</h2>
+              <h4 id="pathFIle">C:/Users/File/Algo</h4>
+            </div>
+            <div class="content_btn">
+              <button id="btnDelete">⚙️</button>
+              <button id="btnRestore">❌</button>
+            </div>
+          </div>
+        </div> -->
+        </div>
+        <div class="container_btn_DeleteAll">
+          <button id="btnDeleteAll">🗑️</button>
+        </div>
+      </div>
+      <div class="recycleBin">
+        <img class="img_trash" src="{{url_for('static', filename='img/trashBin.png')}}" alt="Trash">
+        <div class="recycleBin-container-items">
+          <div class="recycleText one">
+            <span style="--i: 1">F</span>
+            <span style="--i: 2">u</span>
+            <span style="--i: 3">l</span>
+            <span style="--i: 4">l</span>
+          </div>
+          <div class="recycleText two">
+            <span style="--i: 1">E</span>
+            <span style="--i: 2">m</span>
+            <span style="--i: 3">t</span>
+            <span style="--i: 4">y</span>
+          </div>
+          <ul>
+            <li>Files: <b id="file-items">10</b></li>
+            <li>Size: <b id="file-size">5GB</b></li>
+          </ul>
+        </div>
+      </div>
+    </main>
+  </body>
+</html>

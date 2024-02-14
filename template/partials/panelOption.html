@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Option Panel</title>
+    <link
+      rel="stylesheet"
+      href="{{ url_for('static', filename='css/optionPanel.css')}}"
+    />
+    <script
+      async
+      defer
+      src="{{ url_for('static', filename='js/optionPanel.js')}}"
+    ></script>
+  </head>
+  <body>
+    <main class="mainPanel">
+      <div class="mainPanelTitle">
+        <h1>Option Panel</h1>
+      </div>
+      <div class="mainPanelContainerItems">
+        <div class="Item_AIMP">
+          <div class="contentOpOne">
+            <h2 id="opOne">Player AIMP</h2>
+          </div>
+          <div class="contentBtnAIMP">
+            <button id="btn_activeAIMP"></button>
+          </div>
+        </div>
+        <div class="Item_Recycle">
+          <div class="contentOpTwo">
+            <h2 id="opTwo">Active Recycle</h2>
+          </div>
+          <div class="contentBtnRecycle">
+            <button id="btn_recycleBin"></button>
+          </div>
+        </div>
+      </div>
+    </main>
+  </body>
+</html>

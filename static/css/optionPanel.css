@@ -1,0 +1,122 @@
+/* Importando Funetes */
+@font-face {
+    font-family: Shrieky;
+    src: url(../fonts/Shrieky.ttf);
+}
+
+
+.mainPanel,
+.mainPanel.active {
+    position: absolute;
+    width: 300px;
+    height: 600px;
+    top: 30%;
+    left: 100px;
+
+    background: #b5bfe222;
+    border: 1px solid #b5bfe2aa;
+    border-radius: 25px;
+    /* box-shadow: 0 0 10px black inset,
+        0 0 25px black inset,
+        0 0 10px black, 0 0 25px black; */
+
+    display: flex;
+    align-items: center;
+    justify-content: start;
+    flex-direction: column;
+
+    opacity: 1;
+}
+
+.mainPanel {
+    opacity: 0;
+    transition: all .5s;
+}
+
+.mainPanelTitle {
+    position: relative;
+    width: 100%;
+    height: 10%;
+
+    display: flex;
+    align-items: end;
+    justify-content: center;
+}
+
+.mainPanelTitle h1 {
+    text-align: center;
+    font-family: 'Shrieky';
+    letter-spacing: 2px;
+    color: white;
+    /* color: transparent; */
+    /* background: linear-gradient(to right top, rgb(255, 0, 140), blue); */
+    /* background-clip: text; */
+}
+
+.mainPanelContainerItems {
+    position: relative;
+    width: 100%;
+    height: 90%;
+
+    display: flex;
+    flex-direction: column;
+    align-items: start;
+    justify-content: start;
+}
+
+.Item_AIMP,
+.Item_Recycle {
+    position: relative;
+    width: 100%;
+    height: 100px;
+
+    display: flex;
+    align-items: center;
+    justify-content: start;
+}
+
+.contentOpOne,
+.contentOpTwo {
+    flex-grow: 2;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+#opOne,
+#opTwo {
+    text-align: center;
+    
+    font-size: 25px;
+    font-family: "Comic Sans MS";
+    
+    color: white;
+}
+
+.contentBtnAIMP,
+.contentBtnRecycle {
+    position: relative;
+    flex-grow: 1;
+    width: 50px;
+    height: 50px;
+    min-width: 50px;
+    min-height: 50px;
+    max-width: 50px;
+    max-height: 50px;
+    display: flex;
+    align-items: center;
+    justify-content: start;
+}
+
+#btn_activeAIMP,
+#btn_recycleBin {
+    width: 100%;
+    height: 100%;
+    border: none;
+    font-size: 30px;
+
+    text-align: start;
+    background: transparent;
+
+    cursor: pointer;
+}
