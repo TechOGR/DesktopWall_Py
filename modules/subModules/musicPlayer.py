@@ -17,19 +17,31 @@ class Player:
             return False
             
     def getInfoPlayer(self):
-        infoTrack = self.aimp.get_current_track_info()
-        nameTrack = infoTrack["title"]
-        print(infoTrack)
-        
-        durationTrack = infoTrack
-        
         objeto = {
-            'name': nameTrack,
-            'duration': durationTrack
+            'name': "",
+            'duration': ""
         }
-        print(nameTrack)
+        try:
+            infoTrack = self.aimp.get_current_track_info()
+            
+            nameTrack = infoTrack["title"]
+            durationTrack = infoTrack
+
+            objeto = {
+                'name': nameTrack,
+                'duration': durationTrack
+            }
+            
+            return objeto
         
-        return objeto
+        except AttributeError:
+            
+            objeto = {
+                "name": "No iniciado",
+                "duration": "0:0:0"
+            }
+            
+            return objeto
     
     def PlayPause(self):
         self.aimp.play_pause()

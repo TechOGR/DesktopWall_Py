@@ -129,11 +129,11 @@ class RecycleBin {
                     contentbtn.className = "content_btn"
                     btnDelete.className = "btnDelete"
                     btnDelete.innerText = "❌"
-                    btnDelete.addEventListener('click', function () {
-                        deleteFile(data.names[i], data.paths)
-                    })
                     btnRestore.className = "btnRestore"
                     btnRestore.innerText = "⚙️"
+                    btnRestore.addEventListener('click', function () {
+                        restoreFile(data.names[i], data.paths)
+                    })
 
                     contentbtn.appendChild(btnRestore)
                     contentbtn.appendChild(btnDelete)
@@ -148,10 +148,10 @@ class RecycleBin {
             }
             await getPropertiesFiles()
 
-            async function deleteFile(name, path) {
+            async function restoreFile(name, path) {
                 const nameFile = name;
                 const pathFile = path
-                const response = await fetch('/delete', {
+                const response = await fetch('/restore', {
                     method: "POST",
                     headers: {
                         'Content-Type': 'application/json'

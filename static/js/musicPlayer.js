@@ -20,9 +20,9 @@ listBtn.forEach(btn => {
         if (btn === btnPlayPause) {
             await queryPlayer("PlayPause")
         } else if (btn === btn_next) {
-            await queryPlayer("Prev")
-        } else if (btn === btn_back) {
             await queryPlayer("Next")
+        } else if (btn === btn_back) {
+            await queryPlayer("Prev")
         }
     })
 })
@@ -43,4 +43,4 @@ getInfoTrack()
 
 setInterval(async () => {
     await getInfoTrack()
-}, 3000)
+}, 1000)

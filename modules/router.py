@@ -47,7 +47,9 @@ def Router(app):
     def infoFiles():
         
         names, paths = rb.getPropertiesFile()
-        
+        with open("esto.txt", "w") as f:
+            f.write(str({"names": names, "paths": paths}))
+            f.close()
         objeto = {
             'names': names,
             'paths': paths
@@ -55,14 +57,14 @@ def Router(app):
         
         return app.json.dumps(objeto)
     
-    @app.route("/delete", methods=["POST"])
-    def delete():
+    @app.route("/restore", methods=["POST"])
+    def restore():
         req = request.json
         
         nameFile = req["nameFile"]
         pathFile = req["pathFile"]
         
-        rb.deleteFile(nameFile, pathFile)
+        rb.restoreFile(nameFile, pathFile)
         
         return "OK"
     

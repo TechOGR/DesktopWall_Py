@@ -12,7 +12,6 @@ from ctypes import (
     byref,
     Structure
 )
-from threading import Thread
 import math
 
 class RecycleBin:
@@ -81,7 +80,7 @@ class RecycleBin:
             return 'Está vacía'
     
     # Me quedé por Aquí
-    def deleteFile(self,name, path):
+    def restoreFile(self,name, path):
         rb = recycle_bin()
         rb.undelete(path[0])
         print(type(path))

@@ -19,24 +19,61 @@
     align-items: center;
     justify-content: space-between;
     flex-wrap: wrap;
+    background-color: white;
 }
 
 .itemsTop {
+    position: relative;
     display: flex;
     align-items: center;
     justify-content: space-between;
     width: 100%;
     height: 70%;
     flex-grow: 2;
+    background-color: blue;
 }
 
 .contentInfoMusic {
     flex-grow: 2;
+    background-color: black;
     height: 70%;
+    width: 100%;
     display: flex;
     align-items: center;
     justify-content: center;
     flex-direction: column;
+}
+
+.container_nameTrack {
+    width: 100%;
+    height: 100%;
+    background-color: red;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.container_timeTrack {
+    display: flex;
+    align-items: center;
+    justify-content: end;
+    width: 100%;
+    height: auto;
+}
+
+#titleMusic {
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    overflow: hidden;
+    max-width: 90%;
+    min-width: 80%;
+    text-align: center;
+}
+
+#timeMusic {
+    margin-right: 10px;
+    color: black;
+    text-shadow: 0 0 10px black;
 }
 
 .ctn_back,
@@ -68,4 +105,5 @@
     background: transparent;
     border: none;
     font-size: 40px;
+    cursor: pointer;
 }
